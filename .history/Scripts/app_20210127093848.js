@@ -6,22 +6,6 @@
 
 "use strict";
 
-// let myContact = {
-//     "firstName":"Tom Smith",
-//     "contactNumber":"4165555555",
-//     "emailAddress": "tom.smith@dcmail.ca",
-//     "saysHello": function()
-//     {
-//         console.log(`${fullName} says Hello!`);
-//     },
-//     "someOtherObject":{
-//         "friendsList":[
-//             "Peter Parker", "Tony Stark", "Stephen Strange"
-//         ]
-//     }
-// }; 
-
-
 (function(){
 
     function displayHome()
@@ -122,7 +106,7 @@
 
                 let contact = new Contact(fullName.value,contactNumber.value, emailAddress.value);
 
-                console.log(contact.toString());
+                console.log(contact;
                 
             })
         })
