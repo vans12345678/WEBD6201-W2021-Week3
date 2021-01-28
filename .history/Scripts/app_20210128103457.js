@@ -95,7 +95,7 @@
                 messageArea.removeAttribute("class");
                 messageArea.hidden = true;
             }
-        });
+            
             let sendButton = document.getElementById("sendButton");
             sendButton.addEventListener("click", function(event)
             {
@@ -108,8 +108,10 @@
                 if(contact.serialize())
                 {
                     localStorage.setItem((localStorage.length + 1).toString(),contact.serialize());
-                }     
-            });
+                }
+                
+            })
+        })
     }
     function displayContactList()
     {

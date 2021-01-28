@@ -6,6 +6,21 @@
 
 "use strict";
 
+// let myContact = {
+//     "firstName":"Tom Smith",
+//     "contactNumber":"4165555555",
+//     "emailAddress": "tom.smith@dcmail.ca",
+//     "saysHello": function()
+//     {
+//         console.log(`${fullName} says Hello!`);
+//     },
+//     "someOtherObject":{
+//         "friendsList":[
+//             "Peter Parker", "Tony Stark", "Stephen Strange"
+//         ]
+//     }
+// }; 
+
 
 (function(){
 
@@ -95,12 +110,15 @@
                 messageArea.removeAttribute("class");
                 messageArea.hidden = true;
             }
-        });
+            
             let sendButton = document.getElementById("sendButton");
             sendButton.addEventListener("click", function(event)
             {
                 //event.preventDefault();
                 // //Displays twice?
+                // console.log(fullName.value);
+                // console.log(contactNumber.value);
+                // console.log(emailAddress.value);
 
                 let contact = new Contact(fullName.value,contactNumber.value, emailAddress.value);
 
@@ -108,8 +126,10 @@
                 if(contact.serialize())
                 {
                     localStorage.setItem((localStorage.length + 1).toString(),contact.serialize());
-                }     
-            });
+                }
+                
+            })
+        })
     }
     function displayContactList()
     {
@@ -118,25 +138,25 @@
             let contactList = document.getElementById("contactList");
             let data = "";
 
-            for (let index = 0; index < localStorage.length; index++) 
+            for (let index = 1; index < localStorage - 1; index++) 
             {
                 let contactData = localStorage.getItem((index + 1).toString());
                 let contact = new Contact();
-
                 contact.deserialize(contactData);
-
-                data += `<tr>
+                data += 
+                `<tr>
                 <th scope="row">${index + 1}</th>
                 <td>${contact.FullName}</td>
                 <td>${contact.ContactNumber}</td>
                 <td>${contact.EmailAddress}</td>
-              </tr>`;
+                </tr>`;
             }
+
             contactList.innerHTML = data;
+            
         }
-         
+        
     }
-    
     function Start()
     {
         console.log("App Started...");
@@ -159,8 +179,8 @@
                 displayContact();  
                 break; 
             case "Contact-List":
-                displayContactList();  
-                break; 
+            displayContactList();  
+            break; 
         }
         
 

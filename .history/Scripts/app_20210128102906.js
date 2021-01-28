@@ -95,12 +95,15 @@
                 messageArea.removeAttribute("class");
                 messageArea.hidden = true;
             }
-        });
+            
             let sendButton = document.getElementById("sendButton");
             sendButton.addEventListener("click", function(event)
             {
                 //event.preventDefault();
                 // //Displays twice?
+                // console.log(fullName.value);
+                // console.log(contactNumber.value);
+                // console.log(emailAddress.value);
 
                 let contact = new Contact(fullName.value,contactNumber.value, emailAddress.value);
 
@@ -108,8 +111,10 @@
                 if(contact.serialize())
                 {
                     localStorage.setItem((localStorage.length + 1).toString(),contact.serialize());
-                }     
-            });
+                }
+                
+            })
+        })
     }
     function displayContactList()
     {
@@ -118,7 +123,7 @@
             let contactList = document.getElementById("contactList");
             let data = "";
 
-            for (let index = 0; index < localStorage.length; index++) 
+            for (let index = 0; index < localStorage; index++) 
             {
                 let contactData = localStorage.getItem((index + 1).toString());
                 let contact = new Contact();
@@ -136,7 +141,6 @@
         }
          
     }
-    
     function Start()
     {
         console.log("App Started...");
@@ -159,8 +163,8 @@
                 displayContact();  
                 break; 
             case "Contact-List":
-                displayContactList();  
-                break; 
+            displayContactList();  
+            break; 
         }
         
 

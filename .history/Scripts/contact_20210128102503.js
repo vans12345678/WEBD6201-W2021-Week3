@@ -30,7 +30,6 @@ class Contact {
         this.ContactNumber = contactNumber;
         this.EmailAddress = emailAddress;
     }
-
     /**
      *This method overrides the built-in toString() method for Contact class
      *
@@ -72,7 +71,8 @@ class Contact {
         {
             console.error("One or more properties of the Contact is empty");
             return null;
-        }    
+        }
+        
     }
     /**
      *This method takes a comma-separated data string assigns values to the Contact class properties
@@ -84,7 +84,6 @@ class Contact {
     deserialize(data)
     {
         let propertyArray = data.split(",");
-        
         this.FullName = propertyArray[0];
         this.ContactNumber = propertyArray[1];
         this.EmailAddress = propertyArray[2];
