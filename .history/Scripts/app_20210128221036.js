@@ -30,45 +30,22 @@
     }
     function displayProjects()
     {
-        //Define text and id's
         let p1Text = "Project One: COBOL Item List"; 
-        let p2Text = "Project Two: C#, XAML, MDF  Preferred Shares and Common Shares";
-        let p3Text = "Project Three: ASP.NET and MVC Framework Animal Shelter";
+        let p1TextElement = document.getElementById("projectOne");
         let p1Description = "This project reads records from a .dat file, performs calculations on the data" +
-        " then outputs it to a .out file neatly formatted.";
-        let p2Description = "This project uses XAML for the windows form and a database to keep track of common and preferred shares." +
-        " The database keeps track of how many shares(common/preferred) are  available and validation is applied.";
-        let p3Description = "This project is a web application that keeps track of animals, owners, appointment and login info in a database" +
-        " relational database concepts are applied.";
-
-        let p1TextElement = document.getElementById("p1");
-        let p1DescriptionElement = document.getElementById("p1Description");
+                                    " then outputs it to a .out file neatly formatted.";
+        let p1DescriptionElement = document.getElementById("projectOneDescription");
+        
+        var img = document.createElement("img");
+        img.src = "../images/vapor.jpg";
+        var src = document.getElementById("p1image");
+        src.appendChild(img);
+        
         p1TextElement.textContent = p1Text;
         p1DescriptionElement.textContent = p1Description;
 
-        let p2TextElement = document.getElementById("p2");
-        let p2DescriptionElement = document.getElementById("p2Description");
-        p2TextElement.textContent = p2Text;
-        p2DescriptionElement.textContent = p2Description
-        
-        let p3TextElement = document.getElementById("p3");
-        let p3DescriptionElement = document.getElementById("p3Description");
-        p3TextElement.textContent = p3Text;
-        p3DescriptionElement.textContent = p3Description
-
-
-        
-        
-        
-        //Assign text content
-
-        
-       
-
-        //Assign styles        
-        
-
-        
+        p1DescriptionElement.className = "fs-5 fw-bold text-left";
+        p1TextElement.className = "fs-5 fw-bold text-left";
     }
     function displayServices()
     {

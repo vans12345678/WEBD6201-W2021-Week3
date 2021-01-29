@@ -33,12 +33,12 @@
         //Define text and id's
         let p1Text = "Project One: COBOL Item List"; 
         let p2Text = "Project Two: C#, XAML, MDF  Preferred Shares and Common Shares";
-        let p3Text = "Project Three: ASP.NET and MVC Framework Animal Shelter";
+        let p3Text = "Project Three: ASP.NET and MVC Framework";
         let p1Description = "This project reads records from a .dat file, performs calculations on the data" +
         " then outputs it to a .out file neatly formatted.";
-        let p2Description = "This project uses XAML for the windows form and a database to keep track of common and preferred shares." +
+        let p2Description = "This project uses XAML for the windows form and a database to keep track of common and preferred shares.\n" +
         " The database keeps track of how many shares(common/preferred) are  available and validation is applied.";
-        let p3Description = "This project is a web application that keeps track of animals, owners, appointment and login info in a database" +
+        let p3Description = "This project is a web application that keeps track of animals, owners, appointment and login info in a database\n" +
         " relational database concepts are applied.";
 
         let p1TextElement = document.getElementById("p1");

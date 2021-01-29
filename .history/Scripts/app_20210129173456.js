@@ -33,7 +33,7 @@
         //Define text and id's
         let p1Text = "Project One: COBOL Item List"; 
         let p2Text = "Project Two: C#, XAML, MDF  Preferred Shares and Common Shares";
-        let p3Text = "Project Three: ASP.NET and MVC Framework Animal Shelter";
+        let p3Text = "Project Three: ASP.NET and MVC Framework";
         let p1Description = "This project reads records from a .dat file, performs calculations on the data" +
         " then outputs it to a .out file neatly formatted.";
         let p2Description = "This project uses XAML for the windows form and a database to keep track of common and preferred shares." +
