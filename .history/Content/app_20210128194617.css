@@ -1,0 +1,15 @@
+/* custom css goes here */
+body.Index {
+    background-image: url('../images/vapor.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  .container{
+
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(90deg,#CCFFFF,#FFCCCC)
+  }
